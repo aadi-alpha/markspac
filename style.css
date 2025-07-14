@@ -1002,6 +1002,11 @@ nav {
 
 
 }
+@media(max-width:330px){
+  .why-card{
+    max-width:90vw;
+  }
+}
 
 
 /* ------------Why ends------------ */
