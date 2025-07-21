@@ -319,7 +319,7 @@ nav {
 
   margin: auto;
   position: relative;
-  background-image: url("images/banner-01\ 1@2x\ \(1\).png");
+  background-image: url("banner-01\ 1@2x\ \(1\).png");
   background-repeat: no-repeat;
   display: flex;
   height: 650px;
@@ -1554,7 +1554,7 @@ margin-top: 50px;
 /* newsletter starts */
 .newsletter {
   background-color: white;
-  background: url('images/news\ letter-01\ 1.png');
+  background: url('news\ letter-01\ 1.png');
   background-repeat: none;
   background-size: cover;
   background-size: 100%100%;
