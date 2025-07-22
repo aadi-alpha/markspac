@@ -358,7 +358,7 @@ font-size: 12px;
 }
 
 .hero-listing h1 {
-    font-size: clamp(30px, 5vw, 60px);
+    font-size: clamp(40px, 5vw, 60px);
     text-align: center;
     z-index: 1;
     margin-bottom: 5px;
@@ -496,7 +496,9 @@ font-size: 12px;
 
 
 }
-
+.span-select{
+  position: absolute; right: -5%;
+}
 
 /* Custom ▼ arrow */
 
@@ -657,13 +659,15 @@ font-size: 12px;
 
     }
 
-
+.custom-select-wrapper-two{
+  width: 88vw;
+}
     .custom-select-two {
         background-color: #000000;
         color: #ffffff;
         height: 50px;
-
-        width: 88vw;
+width: 100%;
+        max-width: 88vw;
         border: 2px solid #006dc7;
         border-radius: 5px;
         font-size: 16px;
@@ -703,7 +707,7 @@ font-size: 12px;
         position: relative;
         display: flex;
         width: 100%;
-        max-width: 200px;
+        max-width: 250px;
 
 
 
@@ -723,6 +727,9 @@ font-size: 12px;
         cursor: pointer;
         transform: translateY(-12.5px);
     }
+    .span-select{
+  position: absolute; right: 5%;
+}
 }
 
 
