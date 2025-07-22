@@ -58,8 +58,7 @@
 
     <input type="radio" name="toggle" id="yearly">
     <label for="yearly" class="option">Yearly</label>
-
-    <div class="slider"></div>
+<div class="toggle-wrapper"></div>
 
 
 
@@ -314,7 +313,7 @@
     const header = document.querySelector("header");
 
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 700) {
+      if (window.scrollY > 500) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
