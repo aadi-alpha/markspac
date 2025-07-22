@@ -529,6 +529,11 @@ margin-right: auto;
 border-radius: 50px;
 
 }
+@media(min-width:1600px){
+.toggle-wrapper{
+  transform: translateY(-55px);
+}
+}
 @media(max-width:300px){
   .toggle-wrapper{
     display:none;
