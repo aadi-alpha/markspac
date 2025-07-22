@@ -334,10 +334,10 @@ nav {
 
  padding-block: clamp(100px, 8vw, 100px);
     width: 100vw;
-
+background-image: url('images/banner-01\ 1.png');
   
     position: relative;
-    background-image: url("images/banner-01\ 1.png");
+   
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
