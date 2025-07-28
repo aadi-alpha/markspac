@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="tools-desc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <title>Markspac</title>
+
+</head>
+
+<body>
+    <!-- Header + Nav -->
+    <header>
+
+        <div class="logo">Markspac</div>
+        <input type="checkbox" id="toggle" hidden>
+        <label for="toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About&nbsp;Us</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="listing.html">Directory</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="cta"><a href="">List Your Product</a></button>
+    </header>
+    <section class="hero-tool">
+        <div class="hero-left-tool">
+            <div>
+                <img src="images/microsoft-copilot-logo_svgstack_com_28111751049833 1 (6).png" alt="copilot logo"
+                    style="height: 80px; width: 80px;">
+            </div>
+            <div class="text-left">
+                <div class="text-top-left">
+                    <p style="font-size: clamp(20px,2vw,24px); color: #50C4F3; font-weight: bold;">Copilot.Microsoft</p>
+                    <div class="partition"></div>
+                    <p style="font-size: clamp(14px,2vw,16px); font-weight: normal; color: #D5D5D5;">Verified</p>
+                </div>
+                <div class="tool-rating">
+                    <span class="full-stars"><i class="fa-solid fa-star"></i></span>
+                    <span class="full-stars"><i class="fa-solid fa-star"></i></span>
+                    <span class="full-stars"><i class="fa-solid fa-star"></i></span>
+                    <span class="full-stars"><i class="fa-solid fa-star"></i></span>
+                    <span class="half-stars"><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span style="color: #d5d5d5; margin-left: clamp(10px,2vw,20px); display: flex;
+                    align-items: center;"><img class="seal-check" src="images/SealCheck.png" alt="">4.6&nbsp;(12&nbsp;Reviews)</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right-tool">
+            <button class="first-btn-right"><a href="">Write a review</a></button>
+            <button class="sec-btn-rgt"> <a href="">Visit Website &nbsp;&nbsp;<i style="transform: rotate(-45deg);"
+                        class="fa-solid fa-arrow-right"></i></a></button>
+        </div>
+    </section>
+    <!-- nav for sections  -->
+    <div class="sections-nav">
+        <ul>
+            <li><a href="#copilotOverview">Overview</a></li>
+            <li><a href="#bestUsage">Best&nbsp;Usage</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#glimpseSection">Glimpse</a></li>
+        </ul>
+    </div>
+    <!-- end -->
+    <!-- copilot -->
+    <div class="copilot-section" id="copilotOverview">
+        <h2>Microsoft 365 Copilot Overview</h2>
+        <h3>Microsoft 365 Copilot is an AI-powered tool that helps with your work tasks.</h3>
+
+        <p>
+            Users enter a prompt in Copilot and Copilot responds with AI-generated information. The responses are in
+            real-time and can include internet-based content and work content that users have permission to access.
+            Users get content relevant to their work tasks, and in the context of the Microsoft 365 app they're using.
+            The following video is an overview of Microsoft 365 Copilot. It's 1 minute and 49 seconds long.
+            <br><br>
+            For example, you're an Operations Manager and are working with human resources to update job descriptions.
+            In a Copilot prompting session, you can ask Copilot to create a job description and also add qualifications
+            that should be included in the description. In the same prompting session,
+        </p>
+        <!-- ✅ Missing checkbox added -->
+        <input type="checkbox" id="readMoreToggle" hidden>
+
+        <label for="readMoreToggle" class="read-more-label read-more">
+            Read More
+        </label>
+
+        <!-- Extra Content -->
+        <div class="extra-content">
+            <p>
+                Users get content relevant to their work tasks...<br><br>
+                For example, you’re an Operations Manager...
+            </p>
+
+            <!-- Read Less (Inside expanded content, at bottom) -->
+            <label for="readMoreToggle" class="read-more-label read-less">
+                Read Less
+            </label>
+        </div>
+    </div>
+    <!-- end -->
+    <!-- video container -->
+    <div class="video-container">
+        <video id="myVideo" poster="images/image%2017.png">
+            <source src="images/Introducing%20Microsoft%20365%20Copilot%20_%20Your%20Copilot%20for%20Work.mp4"
+                type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="custom-button" id="playPauseBtn">▶</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('myVideo');
+        const btn = document.getElementById('playPauseBtn');
+
+        btn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                btn.textContent = '❚❚'; // Pause symbol
+            } else {
+                video.pause();
+                btn.textContent = '▶'; // Play symbol
+            }
+        });
+
+        // Optional: reset button to ▶ on video end
+        video.addEventListener('ended', () => {
+            btn.textContent = '▶';
+        });
+    </script>
+    <!-- end -->
+
+    <!-- copilot usage -->
+    <section class="copilot-usage" id="bestUsage">
+        <h2 class="copilot-heading">Best Usage Of Microsoft 365 Copilot</h2>
+        <div class="copilot-grid">
+            <div class="copilot-card">
+                <img src="images/Frame 77.png" alt="Icon">
+                <h3>Write, Summarize, And Improve Content</h3>
+                <ul>
+                    <li>Rewrite Content</li>
+                    <li>Summarize Content</li>
+                    <li>Change Tone</li>
+                    <li>Expand Context</li>
+                </ul>
+            </div>
+            <div class="copilot-card">
+                <img src="images/Frame 77 (1).png" alt="Icon">
+                <h3>Analyze, Create And Visualize Data</h3>
+                <ul>
+                    <li>Spreadsheet Grid As Main Focus</li>
+                    <li>Create Chart</li>
+                    <li>Explain Formulas</li>
+                    <li>Detect Anomalies</li>
+                </ul>
+            </div>
+            <div class="copilot-card">
+                <img src="images/Frame 77 (2).png" alt="Icon">
+                <h3>Draft, Email And Prioritize Messages</h3>
+                <ul>
+                    <li>Email Thread View</li>
+                    <li>Auto-Draft Suggestion</li>
+                    <li>Make Format Concise / Formal</li>
+                    <li>Add Data From Calendar</li>
+                </ul>
+            </div>
+            <div class="copilot-card">
+                <img src="images/Frame 77 (3).png" alt="Icon">
+                <h3>Generate, Refine And Design Presentation</h3>
+                <ul>
+                    <li>Generate Image</li>
+                    <li>Rewrite Bullet Points</li>
+                    <li>Add Speaker Notes</li>
+                </ul>
+            </div>
+            <div class="copilot-card">
+                <img src="images/Frame 77 (4).png" alt="Icon">
+                <h3>Summarize, Follow Up, And Answer Questions</h3>
+                <ul>
+                    <li>Summarize This Meeting</li>
+                    <li>Create Task List</li>
+                    <li>Extract Deadlines</li>
+                    <li>Add Data From Calendar</li>
+                </ul>
+            </div>
+            <div class="copilot-card">
+                <img src="images/Frame 77 (5).png" alt="Icon">
+                <h3>Write, Complete And Learn Code</h3>
+                <ul>
+                    <li>Inline Suggestions Highlighted</li>
+                    <li>Show Explanation</li>
+                    <li>Autocomplete On/Off</li>
+                    <li>Code Editor Main Window</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- end -->
+    <!-- review section -->
+    <section class="review-section" id="reviews">
+        <h2>Reviews Of Microsoft 365 Copilot</h2>
+        <div class="select-rate-tool">
+            <div class="tool-rating">
+                <span class="full-stars"><i class="fa-solid fa-star"></i></span>
+                <span class="full-stars"><i class="fa-solid fa-star"></i></span>
+                <span class="full-stars"><i class="fa-solid fa-star"></i></span>
+                <span class="full-stars"><i class="fa-solid fa-star"></i></span>
+                <span class="half-stars"><i class="fa-solid fa-star-half-stroke"></i></span>
+                <span style="color: #d5d5d5; margin-left: 10px;">4.6 (12&nbsp;Reviews)</span>
+            </div>
+            <div class="select-visit">
+                <div class="custom-select-wrapper">
+                    <label for="sort" id="sort-y">Sort&nbsp;By: &nbsp; &nbsp; </label>
+                    <select class="custom-select">
+                        <option value="popularity">Most Recent</option>
+                        <option value="latest">Latest</option>
+                        <option value="recommended">Recommended</option>
+                    </select>
+
+                    <span class="span-select"><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <button>Write a review</button>
+            </div>
+        </div>
+        <div class="reviews-container">
+            <div class="reviewer-container-left">
+                <!-- Review Box 1 -->
+                <div class="review-box">
+                    <div class="box-top">
+                        <p class="reviewer"><span><img src="images/Ellipse 10.png" alt=""></span>SLM Software SLM
+                            Software
+                        </p>
+                        <p class="meta">Posted 1 month ago</p>
+                    </div>
+
+                    <div class="review-text">
+
+                        <div class="text-para-head"
+                            style="margin-bottom: clamp(10px,2vw,20px);  font-size: clamp(20px,3vw,24px);">"Very Good."
+                        </div>
+                        <div class="text-para-text-detail">
+                            The Communication Throughout The Project Was Clear, Consistent, And Professional. I Was
+                            Impressed With How Promptly They Addressed Any Questions Or Concerns. They Paid Attention To
+                            Detail And Always Strived To Ensure The Final Result Met Expectations.
+                        </div>
+                        <button class="toggle-text">See Full Review &nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                    <div class="review-text-full">
+
+                        <div class="text-para-head"
+                            style="margin-bottom: clamp(10px,2vw,20px); font-size: clamp(20px,3vw,24px);">"Very Good."
+                        </div>
+                        <div class="text-para-text-detail">
+                            The Communication Throughout The Project Was Clear, Consistent, And Professional. I Was
+                            Impressed With How Promptly They Addressed Any Questions Or Concerns. They Paid Attention To
+                            Detail And Always Strived To Ensure The Final Result Met Expectations.
+                        </div>
+
+                        <div class="text-para-head">"What service was provided as part of the project?</div>
+                        <div class="text-para-text-detail">
+                            Web Development, Web Designing (UI/UX), E-commerce Development
+                        </div>
+                        <div class="text-para-head">
+                            Describe your project in brief.</div>
+                        <div class="text-para-text-detail">
+                            I recently had my website developed by Unified Infotech, and I couldn't be more impressed
+                            with the results! From the initial consultation to the final delivery, their team was
+                            incredibly professional, responsive, and creative. They took the time to understand my
+                            vision and brought it to life with a sleek, modern design and smooth functionality.
+                            <br>
+                            What stood out the most was their attention to detail, timely communication, and commitment
+                            to quality. The project was completed on schedule, and any changes or feedback I had were
+                            handled promptly and efficiently.
+                        </div>
+                        <div class="text-para-head">What is it about the company that you appreciate the most?</div>
+                        <div class="text-para-text-detail">
+                            What I liked the most about Unified Infotech was their professionalism, clear communication,
+                            and commitment to quality. They truly listened to my ideas, offered expert suggestions, and
+                            delivered a website that was not only visually impressive but also highly functional. Their
+                            ability to understand my vision and bring it to life with precision and creativity really
+                            set them apart.
+                        </div>
+                        <div class="text-para-head">What was it about the company that you didn't like which they should
+                            do better?</div>
+                        <div class="text-para-text-detail">
+                            While my overall experience with Unified Infotech was excellent, if I had to point out one
+                            area for improvement, it would be that some phases of the project took slightly longer than
+                            expected. However, they always communicated delays clearly and made sure the final outcome
+                            was well worth the wait.
+                        </div>
+                        <button class="toggle-text">Hide Full Review &nbsp;&nbsp;<i class="fa-solid fa-angle-up"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="review-box">
+                    <div class="box-top">
+                        <p class="reviewer"><span><img src="images/Ellipse 10.png" alt=""></span>SLM Software SLM
+                            Software
+                        </p>
+                        <p class="meta">Posted 1 month ago</p>
+                    </div>
+
+                    <div class="review-text">
+
+                        <div class="text-para-head"
+                            style="margin-bottom: clamp(10px,2vw,20px);  font-size: clamp(20px,3vw,24px);">"Very Good."
+                        </div>
+                        <div class="text-para-text-detail">
+                            The Communication Throughout The Project Was Clear, Consistent, And Professional. I Was
+                            Impressed With How Promptly They Addressed Any Questions Or Concerns. They Paid Attention To
+                            Detail And Always Strived To Ensure The Final Result Met Expectations.
+                        </div>
+                        <button class="toggle-text">See Full Review &nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                    <div class="review-text-full">
+
+                        <div class="text-para-head"
+                            style="margin-bottom: clamp(10px,2vw,20px); font-size: clamp(20px,3vw,24px);">"Very Good."
+                        </div>
+                        <div class="text-para-text-detail">
+                            The Communication Throughout The Project Was Clear, Consistent, And Professional. I Was
+                            Impressed With How Promptly They Addressed Any Questions Or Concerns. They Paid Attention To
+                            Detail And Always Strived To Ensure The Final Result Met Expectations.
+                        </div>
+
+                        <div class="text-para-head">"What service was provided as part of the project?</div>
+                        <div class="text-para-text-detail">
+                            Web Development, Web Designing (UI/UX), E-commerce Development
+                        </div>
+                        <div class="text-para-head">
+                            Describe your project in brief.</div>
+                        <div class="text-para-text-detail">
+                            I recently had my website developed by Unified Infotech, and I couldn't be more impressed
+                            with the results! From the initial consultation to the final delivery, their team was
+                            incredibly professional, responsive, and creative. They took the time to understand my
+                            vision and brought it to life with a sleek, modern design and smooth functionality.
+                            <br>
+                            What stood out the most was their attention to detail, timely communication, and commitment
+                            to quality. The project was completed on schedule, and any changes or feedback I had were
+                            handled promptly and efficiently.
+                        </div>
+                        <div class="text-para-head">What is it about the company that you appreciate the most?</div>
+                        <div class="text-para-text-detail">
+                            What I liked the most about Unified Infotech was their professionalism, clear communication,
+                            and commitment to quality. They truly listened to my ideas, offered expert suggestions, and
+                            delivered a website that was not only visually impressive but also highly functional. Their
+                            ability to understand my vision and bring it to life with precision and creativity really
+                            set them apart.
+                        </div>
+                        <div class="text-para-head">What was it about the company that you didn't like which they should
+                            do better?</div>
+                        <div class="text-para-text-detail">
+                            While my overall experience with Unified Infotech was excellent, if I had to point out one
+                            area for improvement, it would be that some phases of the project took slightly longer than
+                            expected. However, they always communicated delays clearly and made sure the final outcome
+                            was well worth the wait.
+                        </div>
+                        <button class="toggle-text">Hide Full Review &nbsp;&nbsp;<i class="fa-solid fa-angle-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="reviewer-container-right">
+                <!-- Review Box 1 -->
+                <div class="review-box">
+                    <div class="box-top">
+                        <p class="reviewer"><span><img src="images/Ellipse 10.png" alt=""></span>SLM Software SLM
+                            Software
+                        </p>
+                        <p class="meta">Posted 1 month ago</p>
+                    </div>
+
+                    <div class="review-text">
+
+                        <div class="text-para-head"
+                            style="margin-bottom: clamp(10px,2vw,20px);  font-size: clamp(20px,3vw,24px);">"Very Good."
+                        </div>
+                        <div class="text-para-text-detail">
+                            The Communication Throughout The Project Was Clear, Consistent, And Professional. I Was
+                            Impressed With How Promptly They Addressed Any Questions Or Concerns. They Paid Attention To
+                            Detail And Always Strived To Ensure The Final Result Met Expectations.
+                        </div>
+                        <button class="toggle-text">See Full Review &nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                    <div class="review-text-full">
+
+                        <div class="text-para-head"
+                            style="margin-bottom: clamp(10px,2vw,20px); font-size: clamp(20px,3vw,24px);">"Very Good."
+                        </div>
+                        <div class="text-para-text-detail">
+                            The Communication Throughout The Project Was Clear, Consistent, And Professional. I Was
+                            Impressed With How Promptly They Addressed Any Questions Or Concerns. They Paid Attention To
+                            Detail And Always Strived To Ensure The Final Result Met Expectations.
+                        </div>
+
+                        <div class="text-para-head">"What service was provided as part of the project?</div>
+                        <div class="text-para-text-detail">
+                            Web Development, Web Designing (UI/UX), E-commerce Development
+                        </div>
+                        <div class="text-para-head">
+                            Describe your project in brief.</div>
+                        <div class="text-para-text-detail">
+                            I recently had my website developed by Unified Infotech, and I couldn't be more impressed
+                            with the results! From the initial consultation to the final delivery, their team was
+                            incredibly professional, responsive, and creative. They took the time to understand my
+                            vision and brought it to life with a sleek, modern design and smooth functionality.
+                            <br>
+                            What stood out the most was their attention to detail, timely communication, and commitment
+                            to quality. The project was completed on schedule, and any changes or feedback I had were
+                            handled promptly and efficiently.
+                        </div>
+                        <div class="text-para-head">What is it about the company that you appreciate the most?</div>
+                        <div class="text-para-text-detail">
+                            What I liked the most about Unified Infotech was their professionalism, clear communication,
+                            and commitment to quality. They truly listened to my ideas, offered expert suggestions, and
+                            delivered a website that was not only visually impressive but also highly functional. Their
+                            ability to understand my vision and bring it to life with precision and creativity really
+                            set them apart.
+                        </div>
+                        <div class="text-para-head">What was it about the company that you didn't like which they should
+                            do better?</div>
+                        <div class="text-para-text-detail">
+                            While my overall experience with Unified Infotech was excellent, if I had to point out one
+                            area for improvement, it would be that some phases of the project took slightly longer than
+                            expected. However, they always communicated delays clearly and made sure the final outcome
+                            was well worth the wait.
+                        </div>
+                        <button class="toggle-text">Hide Full Review &nbsp;&nbsp;<i class="fa-solid fa-angle-up"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="review-box">
+                    <div class="box-top">
+                        <p class="reviewer"><span><img src="images/Ellipse 10.png" alt=""></span>SLM Software SLM
+                            Software
+                        </p>
+                        <p class="meta">Posted 1 month ago</p>
+                    </div>
+
+                    <div class="review-text">
+
+                        <div class="text-para-head"
+                            style="margin-bottom: clamp(10px,2vw,20px);  font-size: clamp(20px,3vw,24px);">"Very Good."
+                        </div>
+                        <div class="text-para-text-detail">
+                            The Communication Throughout The Project Was Clear, Consistent, And Professional. I Was
+                            Impressed With How Promptly They Addressed Any Questions Or Concerns. They Paid Attention To
+                            Detail And Always Strived To Ensure The Final Result Met Expectations.
+                        </div>
+                        <button class="toggle-text">See Full Review &nbsp;&nbsp;<i
+                                class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                    <div class="review-text-full">
+
+                        <div class="text-para-head"
+                            style="margin-bottom: clamp(10px,2vw,20px); font-size: clamp(20px,3vw,24px);">"Very Good."
+                        </div>
+                        <div class="text-para-text-detail">
+                            The Communication Throughout The Project Was Clear, Consistent, And Professional. I Was
+                            Impressed With How Promptly They Addressed Any Questions Or Concerns. They Paid Attention To
+                            Detail And Always Strived To Ensure The Final Result Met Expectations.
+                        </div>
+
+                        <div class="text-para-head">"What service was provided as part of the project?</div>
+                        <div class="text-para-text-detail">
+                            Web Development, Web Designing (UI/UX), E-commerce Development
+                        </div>
+                        <div class="text-para-head">
+                            Describe your project in brief.</div>
+                        <div class="text-para-text-detail">
+                            I recently had my website developed by Unified Infotech, and I couldn't be more impressed
+                            with the results! From the initial consultation to the final delivery, their team was
+                            incredibly professional, responsive, and creative. They took the time to understand my
+                            vision and brought it to life with a sleek, modern design and smooth functionality.
+                            <br>
+                            What stood out the most was their attention to detail, timely communication, and commitment
+                            to quality. The project was completed on schedule, and any changes or feedback I had were
+                            handled promptly and efficiently.
+                        </div>
+                        <div class="text-para-head">What is it about the company that you appreciate the most?</div>
+                        <div class="text-para-text-detail">
+                            What I liked the most about Unified Infotech was their professionalism, clear communication,
+                            and commitment to quality. They truly listened to my ideas, offered expert suggestions, and
+                            delivered a website that was not only visually impressive but also highly functional. Their
+                            ability to understand my vision and bring it to life with precision and creativity really
+                            set them apart.
+                        </div>
+                        <div class="text-para-head">What was it about the company that you didn't like which they should
+                            do better?</div>
+                        <div class="text-para-text-detail">
+                            While my overall experience with Unified Infotech was excellent, if I had to point out one
+                            area for improvement, it would be that some phases of the project took slightly longer than
+                            expected. However, they always communicated delays clearly and made sure the final outcome
+                            was well worth the wait.
+                        </div>
+                        <button class="toggle-text">Hide Full Review &nbsp;&nbsp;<i class="fa-solid fa-angle-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Review Box 2 -->
+
+
+        </div>
+
+        </div>
+        <button class="revi-btn">
+            view all reviews
+        </button>
+        <script>
+            document.querySelectorAll('.toggle-text').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const card = this.closest('.review-box');
+                    const isCurrentlyCollapsed = card.querySelector('.review-text').style.display !== 'none';
+
+                    // Collapse all reviews first
+                    document.querySelectorAll('.review-box').forEach(box => {
+                        box.querySelector('.review-text').style.display = 'block';
+                        box.querySelector('.review-text-full').style.display = 'none';
+                    });
+
+                    // Expand clicked review only if it was collapsed
+                    if (isCurrentlyCollapsed) {
+                        card.querySelector('.review-text').style.display = 'none';
+                        card.querySelector('.review-text-full').style.display = 'block';
+                    }
+                });
+            });
+        </script>
+    </section>
+
+    <!-- end -->
+     <!-- glimpse section -->
+      <section class="glimpse-sec" id="glimpseSection">
+        <h2>Glimpse of Microsoft 365 Copilot</h2>
+        <div class="sec-glimpse-images">
+            <img src="images/Rectangle 170.png" alt="copilot image 1 ">
+            <img src="images/Rectangle 171.png" alt="copilot image 2">
+        </div>
+         <div class="video-container-glimpse">
+        <video id="myVideo" poster="images/image%2017.png">
+            <source src="images/Introducing%20Microsoft%20365%20Copilot%20_%20Your%20Copilot%20for%20Work.mp4"
+                type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="custom-button" id="playPauseBtn">▶</button>
+    </div>
+      </section>
+<!-- end -->
+   <!-- newsletter starts -->
+  <section class="newsletter">
+    <div class="newsletter-container">
+      <div class="newsletter-left">
+        <h3>Stay Ahead In AI</h3>
+        <p>Join 10,000+ Professionals Receiving Weekly AI Tool Recommendations And Updates.</p>
+      </div>
+      <div class="newsletter-right">
+        <input type="email" placeholder="Enter your email address">
+        <button class="subscribe-btn">Subscribe Now</button>
+      </div>
+    </div>
+  </section>
+  <!-- newsletter end -->
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column-left">
+        <h3>Markspac</h3>
+        <p>Our markspace is sourced from FSC-certified mills. We plant enough trees to more than double our paper
+          usage.
+        </p>
+        <div class="footer-left-icons">
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-x-twitter"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+
+      </div>
+      <div class="footer-column-list">
+        <div class="footerList">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="">Categories</a></li>
+            <li><a href="">Resources</a></li>
+            <li><a href="">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footerList">
+          <h4>USEFUL LINKS</h4>
+          <ul>
+            <li class="second-list">Terms and conditions</li>
+            <li class="second-list">Privacy Policy</li>
+            <li class="second-list">Comparison</li>
+            <li class="second-list">Support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-column-right">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-envelope" style="color: #ffe8dc;"></i> support@markspac.com</p>
+        <p>Made with <span style="color: red;">❤</span> at our facility in North India.</p>
+      </div>
+    </div>
+    </div>
+    <div class="footer-end">
+      <div class="buttons-footer">
+        <button class="footer-btn">Get Listed Now</button>
+        <button class="footer-btn">Contact Us</button>
+      </div>
+      <p class="footer-copy">© 2025 Markspac, Inc. All rights reserved.</p>
+    </div>
+
+  </footer>
+  <!-- end -->
+
+</body>
+
+</html>
